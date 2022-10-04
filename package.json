@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Pietro Martins de Oliveira <profpietromartins@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+  },
   "dependencies": {
     "express": "^4.18.1"
   },
