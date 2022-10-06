@@ -2,9 +2,9 @@ import { CategoriesRepository } from "../../repositories/implementations/Catetor
 import { CreateCategoryController } from "./CreateCategoryController";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
-const categoryRepository = CategoriesRepository.getInstance();
+const categoriesRepository = CategoriesRepository.getInstance();
 
-const createCategoryUseCase = new CreateCategoryUseCase(categoryRepository);
+const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
 
 const createCategoryController = new CreateCategoryController(
   createCategoryUseCase
