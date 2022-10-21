@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "ts-node-dev --poll -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
-    "test": "jest",
+    "test": "set NODE_ENV=test && jest --detectOpenHandles --runInBand",
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "multer": "^1.4.5-lts.1",
     "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
+    "supertest": "^6.3.0",
     "swagger-ui-express": "^4.5.0",
     "tsyringe": "^4.7.0",
     "typeorm": "0.2.45",
@@ -33,6 +34,7 @@
     "@types/express": "^4.17.14",
     "@types/jest": "^29.1.2",
     "@types/jsonwebtoken": "^8.5.9",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
     "eslint": "^8.24.0",
