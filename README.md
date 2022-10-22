@@ -6,6 +6,7 @@ Deve ser possível cadastrar um novo carro.
 **RN**
 Não deve ser possível cadastrar um carro com uma placa já existente.
 O carro deve ser cadastrado com disponibilidade verdadeira, por padrão.
+O usuário deve estar logado.
 O usuário responsável pelo cadastro deve ser administrador.
 
 # Listagem de carros
@@ -23,12 +24,11 @@ O usuário não precisa estar logado no sistema.
 
 **RF** 
 Deve ser possível cadastrar uma especificação para um carro.
-Deve ser possível listar todas as especificações
-Deve ser possível listar todos os carros
 
 **RN**
 Não deve ser possível cadastrar uma especificação para um carro não existente.
 Não deve ser possível cadastrar uma especificação já existente para o mesmo carro.
+O usuário deve estar logado.
 O usuário responsável pelo cadastro deve ser administrador.
 
 
@@ -36,13 +36,13 @@ O usuário responsável pelo cadastro deve ser administrador.
 
 **RF** 
 Deve ser possível cadastrar a imagem do carro.
-Deve ser possível listar todos os carros.
 
 **RNF** 
 Utilizar o multer para upload dos arquivos.
 
 **RN**
 O usuário deve poder cadastrar mais de uma imagem para o mesmo carro.
+O usuário deve estar logado.
 O usuário responsável pelo cadastro deve ser administrador.
 
 
@@ -55,15 +55,22 @@ Deve ser possível cadastrar um aluguel.
 O aluguel deve ter duraçãoi mínima de 24 horas.
 Não deve ser possível cadastrar um novo aluguel caso já exista um aluguel em aberto para o mesmo usuário.
 Não deve ser possível cadastrar um novo aluguel caso já exista um aluguel em aberto para o mesmo carro.
+Ao realizar o aluguel, o status do carro deve ser marcado como indisponível.
+O usuário deve estar logado na aplicação.
 
-
-# 
+# Devolução do carro
 
 **RF** 
-
-**RNF** 
+Deve ser possível realizar a devolução de um carro.
 
 **RN**
+Se o carro for devolvido com menos de 24 horas, deverá ser cobrado diária completa.
+Ao realizar a devolução, o carr odeverá ser liberado para outro aluguel.
+Ao realizar a devolução, o usuário deverá ser liberado para outro aluguel.
+Ao realizar a devolução, deverá ser calculado o total do aluguél.
+Caso o horário de devolução seka superior ao horário rpevisto da entrega, deverá ser cobrado multa proporcional ao dias de atraso.
+Caso haja multa, deverá ser somado ao total do aluguel.
+
 
 # 
 
