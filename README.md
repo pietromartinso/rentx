@@ -72,13 +72,15 @@ Caso o horário de devolução seka superior ao horário rpevisto da entrega, de
 Caso haja multa, deverá ser somado ao total do aluguel.
 
 
-# 
+# Listagem de Aligueis para usuário
 
 **RF** 
+Deve ser possível realizar a busca de todos os alugueis para o usuário
 
 **RNF** 
 
 **RN**
+O usuário deve estar logado na aplicação
 
 # 
 
