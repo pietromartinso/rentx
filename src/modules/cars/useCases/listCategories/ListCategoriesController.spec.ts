@@ -32,14 +32,14 @@ describe("List Categories Controller", () => {
       email: "admin@rentx.com.br",
       password: "admin",
     });
-    const { token } = responseToken.body;
+    const { refresh_token } = responseToken.body;
     const res = await request(app)
       .post("/categories")
       .send({
         name: "Category Supertest",
         description: "Category Supertest",
       })
-      .set({ Authorization: `Bearer ${token}` });
+      .set({ Authorization: `Bearer ${refresh_token}` });
     const response = await request(app).get("/categories");
 
     expect(response.status).toBe(200);
