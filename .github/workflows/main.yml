@@ -42,7 +42,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd "~/app/rentx"
+            cd ~/app/rentx
             yarn
             ./node_modules/.bin/typeorm migration:run
             pm2 restart rentx
